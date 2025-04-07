@@ -1,0 +1,28 @@
+
+.social-list {
+  text-align: center;
+}
+.social-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.social-links-item {
+  flex-shrink: 0;
+  margin-left: 7px;
+  margin-bottom: 7px;
+
+}
+.social-links-link {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  transition: all .2s;
+}

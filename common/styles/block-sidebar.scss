@@ -1,0 +1,29 @@
+/*
+// .block-sidebar
+*/
+@import './variables.scss';
+
+.block-sidebar__item + .block-sidebar__item {
+    margin-top: 30px;
+}
+.block-sidebar--position--start {
+  padding-inline-end: 20px;
+
+  @media (max-width: breakpoint(lg-end)) {
+    padding-inline-end: 6px;
+  }
+    @media (max-width: breakpoint(md-end)) {
+      padding-inline-end: 0;
+    }
+}
+
+.block-sidebar--position--end {
+  padding-inline-start: 20px;
+
+    @media (max-width: breakpoint(lg-end)) {
+      padding-inline-start: 6px;
+    }
+    @media (max-width: breakpoint(md-end)) {
+      padding-inline-start: 0;
+    }
+}

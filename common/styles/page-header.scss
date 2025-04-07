@@ -1,0 +1,39 @@
+@import './variables.scss';
+
+.block-header-page{
+  background-color: hsl(var(--primary));
+  padding: 16px;
+  // position: relative;
+
+  .content{
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    text-align: center;
+    h1{
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    p{
+      font-weight: 500;
+    }
+  }
+}
+
+.bottom-arrow{
+  margin-bottom: 20px;
+}
+
+.bottom-arrow:after {
+  content:'';
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-top: 12px solid hsl(var(--primary));
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}

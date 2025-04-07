@@ -1,0 +1,42 @@
+/*
+// .widget-categories
+*/
+@import './variables.scss';
+
+$local-expand-transition-duration: .2s;
+
+@mixin card() {
+  border: 2px solid hsl(var(--muted-foreground));
+  border-radius: 2px;
+}
+
+.widget-categories {
+    @include card();
+    padding: 28px;
+}
+.widget-categories__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 18px;
+    font-size: 16px;
+}
+.widget-categories__row {
+    display: flex;
+
+    a {
+        position: relative;
+        display: block;
+        color: inherit;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        fill: #ccc;
+        transition: .15s color;
+        flex-grow: 1;
+        padding-inline-start: 16px;
+        padding-inline-end: 10px;
+        &:hover {
+            color: hsl(var(--secondary));
+        }
+    }
+}

@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;                         /* #FFFFFF */
+    --foreground: 240 10% 3.9%;                      /* #09090B */
+
+    --card: 0 0% 100%;                               /* #FFFFFF */
+    --card-foreground: 240 10% 3.9%;                 /* #09090B */
+
+    --popover: 0 0% 100%;                            /* #FFFFFF */
+    --popover-foreground: 240 10% 3.9%;              /* #09090B */
+
+    --primary: 144 46% 18%;                          /* #19442a */
+    --primary-foreground: 0 0% 9%;                   /* #FAFAFA (off-white, good contrast) */
+
+    --secondary: 42 37% 87%;                         /* #e9e2d4 (neutral beige) */
+    --secondary-foreground: 240 10% 3.9%;            /* #09090B */
+
+    --muted: 240 4.8% 95.9%;                         /* #F4F4F5 */
+    --muted-foreground: 240 3.8% 46.1%;              /* mid-gray */
+
+    --accent: 240 4.8% 95.9%;                        /* #F4F4F5 */
+    --accent-foreground: 240 5.9% 10%;               /* #18181B */
+
+    --destructive: 0 84.2% 60.2%;                    /* #EF4444 */
+    --destructive-foreground: 0 0% 98%;              /* #FAFAFA */
+
+    --border: 240 5.9% 90%;                          /* #E4E4E7 */
+    --input: 240 5.9% 90%;                           /* #E4E4E7 */
+    --ring: 240 10% 3.9%;                            /* #09090B */
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;                      /* #09090B */
+    --foreground: 0 0% 98%;                          /* #FAFAFA */
+
+    --card: 240 10% 3.9%;                            /* #09090B */
+    --card-foreground: 0 0% 98%;                     /* #FAFAFA */
+
+    --popover: 240 10% 3.9%;                         /* #09090B */
+    --popover-foreground: 0 0% 98%;                  /* #FAFAFA */
+
+    --primary: 144 46% 18%;                          /* #19442A */
+    --primary-foreground: 0 0% 98%;                  /* #FAFAFA */
+
+    --secondary: 42 37% 87%;                         /* #e9e2d4 (neutral beige) */
+    --secondary-foreground: 240 10% 3.9%;            /* #09090B */
+
+    --muted: 240 3.7% 15.9%;                         /* #27272A */
+    --muted-foreground: 240 3.8% 46.1%;              /* #71717A */
+
+    --accent: 240 3.7% 15.9%;                        /* #27272A */
+    --accent-foreground: 0 0% 98%;                   /* #FAFAFA */
+
+    --destructive: 0 62.8% 30.6%;                    /* Darker red */
+    --destructive-foreground: 0 0% 98%;              /* #FAFAFA */
+
+    --border: 240 3.7% 15.9%;                        /* #27272A */
+    --input: 240 3.7% 15.9%;                         /* #27272A */
+    --ring: 240 4.9% 83.9%;                          /* #D4D4D8 */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  height: 100vh;
+}
+
+.app {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header{
+  flex-shrink: 0;
+}
+
+.app-body{
+  flex-grow: 1;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+
+.container-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  border-color: hsl(var(--border) / .3);
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  /* max-width: 1536px; */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+}
+
+
+.border-primary{
+  border-color: hsl(var(--primary));
+}
+
+.border-secondary{
+  border-color: hsl(var(--secondary));
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--background)) transparent;
+}
+
+a {
+  &.no-underline {
+    text-decoration: none;
+  }
+}
+
+.icon-color{
+  svg {
+    color: hsl(var(--muted-foreground));
+    fill: hsl(var(--muted-foreground));
+  }
+}
+
+.btn,
+.button {
+  text-decoration: none;
+}
+
+iframe{
+  height: 100%;
+}

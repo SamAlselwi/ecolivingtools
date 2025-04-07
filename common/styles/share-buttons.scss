@@ -1,0 +1,127 @@
+/*
+// .share-buttons
+*/
+@import './variables.scss';
+   // ----------------------------------------
+   // -- .share-buttons
+   // ----------------------------------------
+   $share-buttons: () !default;
+   $share-buttons: map_merge((
+       facebook:  (bg-color: #4267b2, font-color: #fff),
+       twitter:   (bg-color: #1b95e0, font-color: #fff),
+       pinterest: (bg-color: #e63939, font-color: #fff),
+       whatsapp:  (bg-color: #00e676, font-color: #fff),
+       linkedin:  (bg-color: #006599, font-color: #fff),
+       ok:        (bg-color: #eb7815, font-color: #fff),
+       vk:        (bg-color: #4a76a8, font-color: #fff),
+       telegram:  (bg-color: #2ba0da, font-color: #fff),
+       email:     (bg-color: #404040, font-color: #fff),
+   ), $share-buttons);
+   $share-buttons-bg-color:   #000 !default;
+   $share-buttons-font-color: #fff !default;
+
+
+@each $type, $link in $share-buttons {
+    .share-buttons__item--type--#{$type} a {
+        @if (map_get($link, bg-color) != $share-buttons-bg-color) {
+            background: map_get($link, bg-color) !important;
+            .share-buttons__item-icon{
+                svg{
+                    color: map_get($link, font-color) !important;
+                    fill: map_get($link, font-color) !important;
+                }
+            }
+        }
+        @if (map_get($link, font-color) != $share-buttons-font-color) {
+            &,
+            &:hover {
+                color: map_get($link, font-color) !important;
+            }
+        }
+    }
+}
+
+
+
+.share-buttons {}
+.share-buttons__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 -4px;
+    font-size: 11px;
+    line-height: 18px;
+    font-weight: 500;
+    white-space: nowrap;
+    margin-inline-end: -4px;
+    justify-content: center;
+
+    .share-buttons__item {
+        margin-bottom: 4px;
+        margin-inline-end: 4px;
+    }
+    .share-buttons__item-icon + .share-buttons__item-label {
+      margin-inline-start: 5px;
+    }
+    .share-buttons__item-icon {
+        svg{
+            margin-bottom: 3px;
+        }
+    }
+    .share-buttons__item {
+        a {
+            background: $share-buttons-bg-color;
+            color: $share-buttons-font-color;
+            border-radius: 1.5px;
+            display: flex;
+            padding: 2px 6px 1px 6px;
+            position: relative;
+            z-index: 0;
+            overflow: hidden;
+            transition: box-shadow .12s ease-in-out;
+            align-items: center;
+    
+            &, &:hover {
+                text-decoration: none;
+            }
+    
+            &:before {
+                z-index: -1;
+                display: block;
+                content: '';
+                position: absolute;
+                left: 0; // SKIP-RTL
+                top: 0;
+                right: 0; // SKIP-RTL
+                bottom: 0;
+                background: #000;
+                opacity: 0;
+                transition: opacity .08s ease-in-out;
+            }
+        }
+        a:hover:before {
+            opacity: .12;
+        }
+        a:active {
+            box-shadow: inset 0 1px 3px rgba(#000, .35);
+            transition-duration: .04s;
+    
+            &:before {
+                opacity: .06;
+                transition-duration: .04s;
+            }
+        }
+    }
+    .share-buttons__item--without-label {
+        a {
+            width: 21px;
+            text-align: center;
+            padding: 2px 0 1px 0;
+        }
+    }
+}
+
+
+
+
