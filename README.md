@@ -59,7 +59,6 @@ Here are important direct links to the project:
 - 📍 **Sitemap**: [https://www.ecolivingtools.com/sitemap.xml](https://www.ecolivingtools.com/sitemap.xml)
 - 🤖 **Robots.txt**: [https://www.ecolivingtools.com/robots.txt](https://www.ecolivingtools.com/robots.txt)
 - 📬 **Contact Page**: [https://www.ecolivingtools.com/contact](https://www.ecolivingtools.com/contact)
-- 🔍 **SEO Tools Page** *(if exists)*: [https://www.ecolivingtools.com/tools](https://www.ecolivingtools.com/tools)
 
 > 💡 You can include or remove any links based on your actual URL structure.
 
