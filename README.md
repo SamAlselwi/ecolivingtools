@@ -68,5 +68,3 @@ Here are important direct links to the project:
 - TypeScript
 - SCSS
 - Vercel Hosting
-
-## 📁 Folder Structure (Optional)
